@@ -17,7 +17,7 @@ public class ModBlocks {
 
     public static final Block NETHER_REACTOR_CORE = registerBlock("nether_reactor_core",
             new NetherReactorCoreBlock(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.BONE).registryKey(getBlockKey("nether_reactor_core"))));
+                    .requiresTool().sounds(BlockSoundGroup.COPPER).registryKey(getBlockKey("nether_reactor_core"))));
 
     private static RegistryKey<Block> getBlockKey(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Doomdoor.MOD_ID, name));

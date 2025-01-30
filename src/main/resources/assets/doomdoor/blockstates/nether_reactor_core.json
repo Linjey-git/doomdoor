@@ -1,7 +1,7 @@
 {
   "variants": {
-    "": {
-      "model": "doomdoor:block/nether_reactor_core"
-    }
+    "state=neutral": { "model": "doomdoor:block/nether_reactor_core_neutral" },
+    "state=active": { "model": "doomdoor:block/nether_reactor_core_active" },
+    "state=inactive": { "model": "doomdoor:block/nether_reactor_core_inactive" }
   }
 }
