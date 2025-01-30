@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "doomdoor",
+	"version": "${version}",
+	"name": "Doomdoor",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"_se.ho"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/doomdoor/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"ua.seho.doomdoor.Doomdoor"
+		],
+		"client": [
+			"ua.seho.doomdoor.DoomdoorClient"
+		],
+		"fabric-datagen": [
+			"ua.seho.doomdoor.DoomdoorDataGenerator"
+		]
+	},
+	"mixins": [
+		"doomdoor.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
