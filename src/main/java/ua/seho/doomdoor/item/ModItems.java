@@ -8,8 +8,8 @@ import ua.seho.doomdoor.Doomdoor;
 
 public class ModItems {
 
-    private static Item registerItem(String id, Item item) {
-        return Registry.register(Registries.ITEM, Identifier.of(Doomdoor.MOD_ID, id), item);
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(Doomdoor.MOD_ID, name), item);
     }
 
     public static void registerModItems() {

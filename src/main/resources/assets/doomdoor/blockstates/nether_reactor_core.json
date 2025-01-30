@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "doomdoor:block/nether_reactor_core"
+    }
+  }
+}

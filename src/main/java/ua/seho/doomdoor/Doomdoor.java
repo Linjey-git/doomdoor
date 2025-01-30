@@ -24,9 +24,10 @@ public class Doomdoor implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
+
 		ModItemGroups.registerModItemGroups();
 
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
 	}
 }
