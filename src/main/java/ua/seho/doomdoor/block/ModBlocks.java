@@ -24,8 +24,6 @@ public class ModBlocks {
     }
 
     private static Block registerBlock(String name, Block block) {
-//        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Doomdoor.MOD_ID, name));
-//        block.setSettings(block.getSettings().registryKey(key));
 
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Doomdoor.MOD_ID, name), block);
