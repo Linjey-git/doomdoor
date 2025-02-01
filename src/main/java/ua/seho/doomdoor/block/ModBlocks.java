@@ -13,18 +13,20 @@ import net.minecraft.util.Identifier;
 import ua.seho.doomdoor.Doomdoor;
 import ua.seho.doomdoor.block.custom.NetherReactorCoreBlock;
 
+import java.util.function.Function;
+
 public class ModBlocks {
 
-    public static final Block NETHER_REACTOR_CORE = registerBlock("nether_reactor_core",
+    public static final Block NETHER_REACTOR_CORE = registerBlock("nether_reactor_core", (name) ->
             new NetherReactorCoreBlock(AbstractBlock.Settings.create().strength(4f)
-                    .requiresTool().sounds(BlockSoundGroup.COPPER).registryKey(getBlockKey("nether_reactor_core"))));
+                    .requiresTool().sounds(BlockSoundGroup.COPPER).registryKey(getBlockKey(name))));
 
     private static RegistryKey<Block> getBlockKey(String name) {
         return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Doomdoor.MOD_ID, name));
     }
 
-    private static Block registerBlock(String name, Block block) {
-
+    private static Block registerBlock(String name, Function<String, Block> blockSupplier) {
+        Block block = blockSupplier.apply(name);
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(Doomdoor.MOD_ID, name), block);
     }
